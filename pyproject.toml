@@ -1,0 +1,26 @@
+[tool.poetry]
+name = "minsim-inference-api"
+version = "0.1.0"
+description = ""
+authors = ["nohkwanok <cloq@kakao.com>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = ">=3.11,<3.13"
+fastapi = "^0.103.2"
+transformers = "^4.34.0"
+torch = ">=2.0.0, !=2.0.1"
+scipy = "^1.11.3"
+uvicorn = {extras = ["standard"], version = "^0.23.2"}
+gunicorn = "^21.2.0"
+prometheus-fastapi-instrumentator = "^6.1.0"
+
+
+[tool.poetry.group.dev.dependencies]
+black = "^23.9.1"
+isort = "^5.12.0"
+ruff = "^0.1.0"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
